@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TodosTest</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <h1>Todo App Test</h1>
-        <input type="text" id="todoInput" placeholder="Enter todo here..." />
-        <button id="addTodoBtn">Add Todo</button>
+      <h1>Todo App Test</h1>
+      <input type="text" id="todoInput" placeholder="Enter todo here..." />
+      <button id="addTodoBtn">Add Todo</button>
     </header>
     <div id="main">
-        <h1 id="heading">Todos</h1>
+      <h1 id="heading">Todos</h1>
     </div>
 
     <!-- <script src="index.js" /> -->
     <script>
-        document.getElementById('todoInput').addEventListener('change',(e)=>handleOnChange(e))
-        document.getElementById('addTodoBtn').addEventListener('click',()=>handleAddTodo())
+      document
+        .getElementById("todoInput")
+        .addEventListener("change", (e) => handleOnChange(e));
+      document
+        .getElementById("addTodoBtn")
+        .addEventListener("click", () => handleAddTodo());
 
-        let todo = "";
-        let count= 1;
-        const handleOnChange = (e) => {
-            todo = e.target.value
-        }
+      let todo = "";
+      let count = 1;
+      const handleOnChange = (e) => {
+        todo = e.target.value;
+      };
 
-        const handleAddTodo = () => {
-            document.getElementById('main').innerHTML += `<h3 id="todo${count}">${todo}</h3>`
-            count++;
-        }
+      const handleAddTodo = () => {
+        document.getElementById(
+          "main"
+        ).innerHTML += `<h3 id="todo${count}">${todo}</h3>`;
+        count++;
+      };
+      
     </script>
-</body>
-
+  </body>
 </html>
